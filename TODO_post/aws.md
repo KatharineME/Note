@@ -49,7 +49,7 @@ aws configure
 Enter prompted information.
 
 ```zsh
-AWS Access Key ID [None]: XXX 
+AWS Access Key ID [None]: XXX
 AWS Secret Access Key [None]: XXX
 Default region name [None]: us-west-2
 Default output format [None]: json
