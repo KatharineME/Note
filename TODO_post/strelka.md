@@ -51,9 +51,9 @@ In the configure step, you pass in the alignment file, reference data, output di
 
 ```sh
 {STRELKA_INSTALL_PATH}/bin/configureStrelkaGermlineWorkflow.py \
---bam NA12878.bam \
---referenceFasta hg19.fa \
---runDir ${STRELKA_ANALYSIS_PATH}
+  --bam NA12878.bam \
+  --referenceFasta hg19.fa \
+  --runDir ${STRELKA_ANALYSIS_PATH}
 ```
 
 which creates a `runWorkflow.py` script with those settings in `output/strelka/` using Pyflow. `runWorkflow.py` is then run in the execution step where you can pass in parameters like number of jobs:

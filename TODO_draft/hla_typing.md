@@ -31,11 +31,11 @@ Using skchronicles docker image:
 Cd data2/
 
 HLA-LA.pl \
-    --BAM /data/dev/genome-seek/test_subsampled_docker/BAM/HG004.sorted.bam \
-    --graph /data/OpenOmics/references/genome-seek/HLA-LA/graphs/PRG_MHC_GRCh38_withIMGT \
-    --sampleID sample \
-    --maxThreads 8 \
-    --workingDir /data/dev/genome-seek/test_subsampled_docker/HLA/HG004
+ --BAM /data/dev/genome-seek/test_subsampled_docker/BAM/HG004.sorted.bam \
+ --graph /data/OpenOmics/references/genome-seek/HLA-LA/graphs/PRG_MHC_GRCh38_withIMGT \
+ --sampleID sample \
+ --maxThreads 8 \
+ --workingDir /data/dev/genome-seek/test_subsampled_docker/HLA/HG004
 
 HATK - NOT TRIED
 26 stars on GitHub
@@ -61,15 +61,15 @@ Github has not been updated for 7 years
 Paper: https://www.pnas.org/doi/full/10.1073/pnas.1707945114
 Paper claims to outperform many of the other tools on this list
 
-This alignment worked for typing: 
+This alignment worked for typing:
 bwa mem -t 10 -o G2596.sam -R @RG\tID:G2596\tSM:G2596 /Users/kate/craft/jl/FASTQ.jl/data/GRCh38/GRCh38.primary_assembly.genome/GRCh38.primary_assembly.genome.fa /Users/kate/Customer/2596/2596 Raw Data/01.RawData/G2596/G2596.R1.fastq.gz /Users/kate/Customer/2596/2596 Raw Data/01.RawData/G2596/G2596.R2.fastq.gz
 
 xHLA command:
-docker run -v `pwd`:`pwd` -w `pwd` humanlongevity/hla \ 
+docker run -v `pwd`:`pwd` -w `pwd` humanlongevity/hla \
 --sample_id G2596 --input_bam_path tests/G2596.bam \
 --output_path test
 
-HLA*PRG - NOT TRIED
+HLA\*PRG - NOT TRIED
 Written by Alexander Dilthey. HLA-LA is written by his lab..
 Github has not been updated for 6 years
 But HLA-A was updated 6 months ago.

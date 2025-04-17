@@ -56,9 +56,9 @@ Manifest.toml
 Project.toml
 README.md
 src/
-    Project.jl
+Project.jl
 test/
-    runtests.jl
+runtests.jl
 ```
 
 ### Project.toml

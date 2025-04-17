@@ -54,16 +54,26 @@ Person1 VCF:
 
 ```sh
 #CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	Person1
-chr1	10120	.	T	C	1	LowGQX;LowDepth;NoPassedVariantGTs	SNVHPOL=4;MQ=6	GT:GQ:GQX:DP:DPF:AD:ADF:ADR:SB:FT:PL	0/1:22:0:2:2:1,1:0,1:1,0:0:LowGQX;LowDepth:30,0,22
-chr1	51898	.	C	A	6	LowGQX;NoPassedVariantGTs	SNVHPOL=2;MQ=35	GT:GQ:GQX:DP:DPF:AD:ADF:ADR:SB:FT:PL	0/1:38:5:6:0:4,2:1,2:3,0:2.1:PASS:40,0,101
+chr1 10120 . T C 1 LowGQX
+LowDepth
+NoPassedVariantGTs SNVHPOL=4
+MQ=6 GT:GQ:GQX:DP:DPF:AD:ADF:ADR:SB:FT:PL 0/1:22:0:2:2:1,1:0,1:1,0:0:LowGQX
+LowDepth:30,0,22
+chr1 51898 . C A 6 LowGQX
+NoPassedVariantGTs SNVHPOL=2
+MQ=35 GT:GQ:GQX:DP:DPF:AD:ADF:ADR:SB:FT:PL 0/1:38:5:6:0:4,2:1,2:3,0:2.1:PASS:40,0,101
 ```
 
 Person2 VCF:
 
 ```sh
 #CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	Person2
-chr1	10250	.	A	C	1	LowGQX;NoPassedVariantGTs	SNVHPOL=4;MQ=11	GT:GQ:GQX:DP:DPF:AD:ADF:ADR:SB:FT:PL	0/1:23:0:4:0:3,1:1,0:2,1:0:LowGQX:26,0,80
-chr1	51898	.	C	A	6	LowGQX;NoPassedVariantGTs	SNVHPOL=2;MQ=35	GT:GQ:GQX:DP:DPF:AD:ADF:ADR:SB:FT:PL	0/1:17:0:7:0:6,1:3,1:3,0:0:LowGQX:19,0,146
+chr1 10250 . A C 1 LowGQX
+NoPassedVariantGTs SNVHPOL=4
+MQ=11 GT:GQ:GQX:DP:DPF:AD:ADF:ADR:SB:FT:PL 0/1:23:0:4:0:3,1:1,0:2,1:0:LowGQX:26,0,80
+chr1 51898 . C A 6 LowGQX
+NoPassedVariantGTs SNVHPOL=2
+MQ=35 GT:GQ:GQX:DP:DPF:AD:ADF:ADR:SB:FT:PL 0/1:17:0:7:0:6,1:3,1:3,0:0:LowGQX:19,0,146
 ```
 
 Merge command (must create indices for each VCF first).
@@ -80,9 +90,17 @@ Merged VCF:
 
 ```sh
 #CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	Person1	Person2
-chr1	10120	.	T	C	1	LowGQX;LowDepth;NoPassedVariantGTs	SNVHPOL=4;MQ=6	GT:GQ:GQX:DP:DPF:AD:ADF:ADR:SB:FT:PL	0/1:22:0:2:2:1,1:0,1:1,0:0:LowGQX;LowDepth:30,0,22	./.:.:.:.:.:.:.:.:.:.:.
-chr1	10250	.	A	C	1	LowGQX;NoPassedVariantGTs	SNVHPOL=4;MQ=11	GT:GQ:GQX:DP:DPF:AD:ADF:ADR:SB:FT:PL	./.:.:.:.:.:.:.:.:.:.:.	0/1:23:0:4:0:3,1:1,0:2,1:0:LowGQX:26,0,80
-chr1	51898	.	C	A	6	LowGQX;NoPassedVariantGTs	SNVHPOL=2;MQ=35	GT:GQ:GQX:DP:DPF:AD:ADF:ADR:SB:FT:PL	0/1:38:5:6:0:4,2:1,2:3,0:2.1:PASS:40,0,101	0/1:17:0:7:0:6,1:3,1:3,0:0:LowGQX:19,0,146
+chr1 10120 . T C 1 LowGQX
+LowDepth
+NoPassedVariantGTs SNVHPOL=4
+MQ=6 GT:GQ:GQX:DP:DPF:AD:ADF:ADR:SB:FT:PL 0/1:22:0:2:2:1,1:0,1:1,0:0:LowGQX
+LowDepth:30,0,22 ./.:.:.:.:.:.:.:.:.:.:.
+chr1 10250 . A C 1 LowGQX
+NoPassedVariantGTs SNVHPOL=4
+MQ=11 GT:GQ:GQX:DP:DPF:AD:ADF:ADR:SB:FT:PL ./.:.:.:.:.:.:.:.:.:.:. 0/1:23:0:4:0:3,1:1,0:2,1:0:LowGQX:26,0,80
+chr1 51898 . C A 6 LowGQX
+NoPassedVariantGTs SNVHPOL=2
+MQ=35 GT:GQ:GQX:DP:DPF:AD:ADF:ADR:SB:FT:PL 0/1:38:5:6:0:4,2:1,2:3,0:2.1:PASS:40,0,101 0/1:17:0:7:0:6,1:3,1:3,0:0:LowGQX:19,0,146
 ```
 
 Take a look at the three rows of the merged VCF. The first row is a variant that only Person1 has, the second row is a variant that only Person2 has, and the third row is a variant that both people have. This is great, because variant information for either person wasn't lost in the merge.

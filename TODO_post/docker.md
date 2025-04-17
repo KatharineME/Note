@@ -92,14 +92,14 @@ docker-compose is a command line tool that reads a file called **docker-compose.
 ```sh
 version: 3
 services:
-    redis:
-        image: my_redis_image
-    db:
-        image: postgres:9.4
-    vote:
-        image: voting-app
-        ports:
-            -5000:80
+redis:
+image: my_redis_image
+db:
+image: postgres:9.4
+vote:
+image: voting-app
+ports:
+-5000:80
 ```
 
 Run containers in **docker-compose.yml**
@@ -182,7 +182,7 @@ docker system prune
 Execute a command in a running container.
 
 ```sh
-docker exec <container_id> cat file_in_container
+docker exec file_in_container < container_id > cat
 ```
 
 ### Image
@@ -214,7 +214,7 @@ docker tag <source_image_name>:<tag> <target_image_name>:<tag>
 Build an iamge off of the Dockerfile in the current directory `.` and tag it `-t` with `image_name`.
 
 ```sh
-docker build -t <image_name> .
+docker build -t < image_name > .
 ```
 
 See image layer information.
