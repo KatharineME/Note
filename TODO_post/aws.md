@@ -16,6 +16,42 @@ A root user's login information was used to create an account. The root user has
 
 An IAM user can interface with multiple accounts and have varying degrees of power in each (Administrative access for example). But an IAM user will never have the power level of a root user.
 
+## Virtual Private Cloud (VPC)
+
+Private cloud to isolate your resources from the world's.
+
+## Elastic Cloud Compute (EC2)
+
+A cloud virtual machine that you rent.
+
+#### Conenct with SSH
+
+Go to the security group and set a rule for SSH access over TCP using port 22 with source as output of
+
+```bash
+curl -4 ifconfig.me
+```
+
+Then connect
+
+```bash
+ssh -4 -v -i namikey.pem ec2-user@34.207.73.71
+```
+
+####
+
+Start the docker daemon
+
+```bash
+sudo systemctl start docker
+```
+
+or enable to start on boot
+
+```bash
+sudo systemctl enable docker
+```
+
 ## S3
 
 Cloud storage organized into buckets.
@@ -108,9 +144,3 @@ Like Github repositories, S3 buckets will only store non-empty folders.
 ##### More
 
 https://docs.aws.amazon.com/cli/latest/reference/s3/
-
-## Virtual Private Cloud (VPC)
-
-Private cloud within the cloud.
-
-How your resources are separted from everybody's resources.
