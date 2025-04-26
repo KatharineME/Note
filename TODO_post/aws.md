@@ -108,3 +108,9 @@ Like Github repositories, S3 buckets will only store non-empty folders.
 ##### More
 
 https://docs.aws.amazon.com/cli/latest/reference/s3/
+
+## Virtual Private Cloud (VPC)
+
+Private cloud within the cloud.
+
+How your resources are separted from everybody's resources.
