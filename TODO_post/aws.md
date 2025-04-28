@@ -18,6 +18,10 @@ An IAM user can interface with multiple accounts and have varying degrees of pow
 
 ## Virtual Private Cloud (VPC)
 
+![virtual private cloud](/images/virtual_private_cloud.png)
+
+![availability zone](/images/availability_zone.png)
+
 Private cloud to isolate your resources from the world's.
 
 ## Elastic Cloud Compute (EC2)
@@ -35,10 +39,10 @@ curl -4 ifconfig.me
 Then connect
 
 ```bash
-ssh -4 -v -i namikey.pem ec2-user@34.207.73.71
+ssh -4 -v -i namikey.pem ec2-user@XXX
 ```
 
-####
+#### Use docker
 
 Start the docker daemon
 
@@ -46,10 +50,24 @@ Start the docker daemon
 sudo systemctl start docker
 ```
 
-or enable to start on boot
+Enable to start on boot
 
 ```bash
 sudo systemctl enable docker
+```
+
+Run the container in the background and restart automatically
+
+Port 8000 in container > 80 in the EC2 instance > public IP of instance
+
+```bash
+docker run --detach --restart unless-stopped -p 80:8000 image
+```
+
+See the logs of a container
+
+```bash
+docker logs -f container
 ```
 
 ## S3
