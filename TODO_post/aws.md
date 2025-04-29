@@ -28,7 +28,7 @@ Private cloud to isolate your resources from the world's.
 
 A cloud virtual machine that you rent.
 
-#### Conenct with SSH
+#### SSH
 
 Go to the security group and set a rule for SSH access over TCP using port 22 with source as output of
 
@@ -42,7 +42,7 @@ Then connect
 ssh -4 -v -i namikey.pem ec2-user@XXX
 ```
 
-#### Use docker
+#### Docker
 
 Start the docker daemon
 
@@ -58,7 +58,7 @@ sudo systemctl enable docker
 
 Run the container in the background and restart automatically
 
-Port 8000 in container > 80 in the EC2 instance > public IP of instance
+Port 8000 in container > 80 in EC2 instance > public IP of instance
 
 ```bash
 docker run --detach --restart unless-stopped -p 80:8000 image
@@ -70,11 +70,17 @@ See the logs of a container
 docker logs -f container
 ```
 
+Connect to container shell
+
+```bash
+docker exec -it container /bin/bash
+```
+
 ## S3
 
 Cloud storage organized into buckets.
 
-By default buckets are completely private. Individual files or folders can be made public however.
+By default buckets are completely private. Individual files or folders can be made public.
 
 Bucket names must be globally unique, lowercase, and can only include hypens or periods.
 
@@ -157,8 +163,4 @@ Sync file. This command will override the target file if it already exists.
 aws s3 sync s3://mybucket/folder/file.txt ~/Downloads/file.txt
 ```
 
-Like Github repositories, S3 buckets will only store non-empty folders.
-
-##### More
-
-https://docs.aws.amazon.com/cli/latest/reference/s3/
+S3 buckets will not store empty folders.
