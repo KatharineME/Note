@@ -24,9 +24,36 @@ An IAM user can interface with multiple accounts and have varying degrees of pow
 
 Private cloud to isolate your resources from the world's.
 
+Broken into private and public subnets. The public subnet has a route to the internet, the private subnet does not.
+
+Network ACLs are subnet firewalls and set allow and deny rules.
+
+To connect a private subnet to the internet:
+
+1. Make a NAT gateway in the public subnet
+2. Make a route from the private subnet to the NAT gateway
+3. Make a route from the NAT gateway to the internet
+
+A CIDR range is assigned to each VPC, that dictates how many IP addresses are availble for use in that VPC.
+
+## Region
+
+Set the AWS Console region to match your physical location.
+
+us-west-2 and us-east-1 are both low cost, support HIPPA copliance standards, and have high resource availability.
+
+Broken into availability zones.
+
+East coast user
+
+- App hosted in us-west-2 > 60-100ms latency
+- App hosted in us-east-1 > 20-40ms latency
+
 ## Elastic Cloud Compute (EC2)
 
 A cloud virtual machine that you rent.
+
+Security groups control EC2 instance traffic.
 
 #### SSH
 
@@ -74,6 +101,18 @@ Connect to container shell
 
 ```bash
 docker exec -it container /bin/bash
+```
+
+Check image vulnerabilities
+
+```bash
+docker scout cves image
+```
+
+Get recommendations on how to fix vulnerabilities
+
+```bash
+docker scout recommendations image
 ```
 
 ## S3
