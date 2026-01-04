@@ -1,4 +1,4 @@
-+++ 
++++
 date = "2022-10-05"
 title = "GRCH38 and Beyond"
 slug = "grch38_and_beyond"

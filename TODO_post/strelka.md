@@ -1,7 +1,7 @@
-+++ 
++++
 date = "2020-12-03"
 title = "Strelka"
-slug = "strelka" 
+slug = "strelka"
 tags = []
 categories = []
 +++
@@ -30,7 +30,6 @@ VCF 4.1 format.
 Germline analysis is reported to the following variant files:
 
 - variants.vcf.gz
-
   - This describes all potential variant loci across all samples. Note this file includes non-variant loci if they have a non-trivial level of variant evidence or contain one or more alleles for which genotyping has been forced. Please see the multi-sample variants VCF section below for additional details on interpreting this file.
 
 - genome.S${N}.vcf.gz

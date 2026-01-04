@@ -1,7 +1,7 @@
-+++ 
++++
 date = "2020-08-08"
 title = "Encoding Basics"
-slug = "encoding-basics" 
+slug = "encoding-basics"
 tags = []
 categories = []
 +++

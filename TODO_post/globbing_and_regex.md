@@ -1,4 +1,4 @@
-+++ 
++++
 date = "2021-01-09"
 title = "Globbing and Regex"
 slug = "globbing-and-regex"

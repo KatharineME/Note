@@ -1,4 +1,4 @@
-+++ 
++++
 date = "2020-10-15"
 title = "Trace Ancestry Through DNA"
 slug = "trace-ancestry-through-dna"

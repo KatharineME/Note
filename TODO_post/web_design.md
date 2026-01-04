@@ -1,7 +1,7 @@
-+++ 
++++
 date = "2020-03-25"
 title = "Web Design"
-slug = "web-design" 
+slug = "web-design"
 tags = []
 categories = []
 +++

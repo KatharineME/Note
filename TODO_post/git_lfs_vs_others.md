@@ -1,7 +1,7 @@
-+++ 
++++
 date = "2020-12-13"
 title = "Git LFS vs Others"
-slug = "git-lfs-vs-others" 
+slug = "git-lfs-vs-others"
 tags = []
 categories = []
 +++

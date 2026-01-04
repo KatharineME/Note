@@ -1,7 +1,7 @@
-+++ 
++++
 date = "2022-03-28"
 title = "Whats in your genome data files and what can you do with them"
-slug = "what-you-can-do-with-your-genome-data-files" 
+slug = "what-you-can-do-with-your-genome-data-files"
 tags = []
 categories = []
 +++

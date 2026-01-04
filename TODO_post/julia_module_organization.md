@@ -1,7 +1,7 @@
-+++ 
++++
 date = "2021-07-26"
 title = "Julia Module Organization"
-slug = "julia-module-organization" 
+slug = "julia-module-organization"
 tags = []
 categories = []
 +++

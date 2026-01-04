@@ -1,4 +1,4 @@
-+++ 
++++
 date = "2022-03-25"
 title = "DNA Collection Methods"
 slug = "dna-collection-methods"

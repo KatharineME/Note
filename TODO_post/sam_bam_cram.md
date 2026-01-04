@@ -1,7 +1,7 @@
-+++ 
++++
 date = "2020-09-20"
 title = "SAM BAM CRAM"
-slug = "sam-bam-cram" 
+slug = "sam-bam-cram"
 tags = []
 categories = []
 +++

@@ -1,7 +1,7 @@
-+++ 
++++
 date = "2020-09-15"
 title = "Read Pre-Processing"
-slug = "read-preprocessing" 
+slug = "read-preprocessing"
 tags = []
 categories = []
 +++

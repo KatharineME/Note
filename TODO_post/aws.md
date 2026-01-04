@@ -1,4 +1,4 @@
-+++ 
++++
 date = "2023-05-26"
 title = "AWS CLI and S3"
 slug = "aws_cli_and_s3"

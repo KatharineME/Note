@@ -1,7 +1,7 @@
-+++ 
++++
 date = "2020-10-02"
 title = "Sequence Analysis Benchmark"
-slug = "sequence-analysis-benchmark" 
+slug = "sequence-analysis-benchmark"
 tags = []
 categories = []
 +++
@@ -26,7 +26,6 @@ categories = []
 ## Genome in a Bottle (Giab)
 
 - NA12878
-
   - Pilot genome
   - Female, caucasian ancestry
   - From CEPH Utah Reference Collection

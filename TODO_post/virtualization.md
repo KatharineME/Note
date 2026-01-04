@@ -1,7 +1,7 @@
-+++ 
++++
 date = "2020-10-25"
 title = "Virtualization"
-slug = "virtualization" 
+slug = "virtualization"
 tags = []
 categories = []
 +++

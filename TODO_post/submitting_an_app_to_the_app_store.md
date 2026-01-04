@@ -1,4 +1,4 @@
-+++ 
++++
 date = "2021-10-05"
 title = "Creating a MacOS App"
 slug = "creating_a_macos_app"

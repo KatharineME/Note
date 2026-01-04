@@ -1,7 +1,7 @@
-+++ 
++++
 date = "2020-08-28"
 title = "FASTQ"
-slug = "fastq" 
+slug = "fastq"
 tags = []
 categories = []
 +++

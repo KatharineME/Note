@@ -1,4 +1,4 @@
-+++ 
++++
 date = "2020-10-15"
 title = "App Packaging"
 slug = "app_packaging"

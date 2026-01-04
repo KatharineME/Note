@@ -1,4 +1,4 @@
-+++ 
++++
 date = "2022-11-16"
 title = "Alt Aware Mapping"
 slug = "alt_aware_mapping"

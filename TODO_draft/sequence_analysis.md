@@ -1,7 +1,7 @@
-+++ 
++++
 date = "2020-10-15"
 title = "Sequence Analysis"
-slug = "sequence-analysis" 
+slug = "sequence-analysis"
 tags = []
 categories = []
 +++
